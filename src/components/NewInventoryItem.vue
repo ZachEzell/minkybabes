@@ -38,7 +38,7 @@
                     </div>
                     
             </div>
-            <div class="serial-box">
+           
                 <div class="new-inventory-item" v-for="(items, index) in serialInputs" :key="index" v-if="serializedOption ==`optionOne`">
                     <div class="inline" v-if="checked" >
                         <p class="index-number"> {{ index + 1  }}  </p>
@@ -49,10 +49,10 @@
                         <head-hunter-input ></head-hunter-input>
                     </div>      
                 </div>
-             </div>
+             
             <div class="buttons">
                 <button id="contract-submit-button"> Add Item(s) </button>
-                <button id="cancel" > Cancel </button> 
+                <button id="cancel" @click="emitCancel"> Cancel </button> 
             </div>
         </div>
         
@@ -104,8 +104,12 @@
             },
             debounceThisFunction(functionName, time) {
                 return debounce(functionName, time);
+            },
+            emitCancel(){
+                this.$emit('newItemIsShown', false);
             }
         },
+        
        
     }
 
@@ -177,6 +181,7 @@
     .buttons{
         width: 30%;
         align-self: center;
+        margin-top: 25px;
     }
     .section-title{
         font-size: 1.2em;

@@ -7,9 +7,9 @@
         <div id="inventory-menu">
             <div class="column"><i class="fas fa-cogs" > </i>Settings</div>
             <div class="column"><i class="fa fa-long-arrow-alt-down"></i>Depreciate </div>
-            <div class="column"><i class="fa fa-plus"></i>Add new </div>
+            <div class="column"><i class="fa fa-plus" @click="newItemScreenIsShown = true"></i>Add new </div>
             <div class="column"><i class="fas fa-cubes" > </i>Change Layout </div>
-            
+            <new-inventory-item v-if="newItemScreenIsShown" @newItemIsShown="newItemScreenIsShown = false"></new-inventory-item>
         </div>
     </div>
 </template>
@@ -21,7 +21,7 @@ import NewInventoryItem from './NewInventoryItem';
     export default {
         data(){
             return {
-
+                newItemScreenIsShown: false
             }
         },
         components: {
@@ -39,9 +39,9 @@ import NewInventoryItem from './NewInventoryItem';
         padding-left: 25px;
         padding-bottom: 25px;
         -webkit-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
--moz-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
-border-radius: 5px;
+        -moz-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
+        box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
+        border-radius: 5px;
     }
     #inventory-title{
         font-size: 2em;
