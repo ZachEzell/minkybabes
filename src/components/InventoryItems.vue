@@ -3,12 +3,12 @@
     <div id="inventory-items">
         <div id="picture-mode" v-if="layoutType == 'picture' ">
             <div class="inventory-item" v-for="(item, index) in listOfInventoryItems" :key="index">
-                <div class="spaced">Model: {{ item.model }}</div>
-                <div class="spaced">Serial: {{ item.serial }}</div>
-                <div class="spaced">Description: {{ item.description }}</div>
-                <div class="spaced" v-if="item.status == 'rented' " id="rented"> Status: {{ item.status }}</div>
-                <div class="spaced" v-if="item.status == 'stock' " id="stock" > Status: {{ item.status }}</div>
-                <div>
+                <div class="spaced">Model: <span class="item-description">{{ item.model }}</span></div>
+                <div class="spaced">Serial: <span class="item-description">{{ item.serial }}</span></div>
+                <div class="spaced">Description: <span class="item-description">{{ item.description }}</span></div>
+                <div class="spaced" v-if="item.status == 'rented' " > Status: <span class="rented item-description">{{ item.status }}</span></div>
+                <div class="spaced" v-if="item.status == 'stock' "  > Status:  <span class="stock item-description">{{ item.status }}</span></div>
+                <div class="edit-button">
                     <basic-button>Edit</basic-button>
                     
                 </div>
@@ -171,6 +171,7 @@ let _ = require('lodash');
         padding-top: 25px;
         
         
+        
        
     }
     #picture-mode{
@@ -187,15 +188,21 @@ let _ = require('lodash');
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        
     }
-    #rented{
-        color: red;
+    .rented{
+        color: rgb(222,65,146) ;
     }
-    #stock{
-        color: green;
+    .stock{
+        color: rgb(44,113,216);
     }
     .spaced{
         margin-bottom: 15px;
+    }
+    .item-description{
+        font-size: 0.85rem;
+    }
+    .edit-button{
+        align-self: center;
     }
 </style>

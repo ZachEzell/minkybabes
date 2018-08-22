@@ -19,7 +19,9 @@
         background: none;
         border: 1px solid rgb(32,134,234);
         padding: 10px 25px 10px 25px;
-        transition: 0.5s;
+        transition: 0.2s;
+        border-radius: 2px;
+        color: rgb(50,50,93);
     }
     button:hover{
         cursor: pointer;

@@ -68,7 +68,7 @@ import NewInventoryItem from './NewInventoryItem';
     i{
         margin-bottom: 20px;
         font-size: 2.5em;
-        transition: 1s;
+        transition: 0.2s;
     }
     i:hover{
        
