@@ -51,7 +51,7 @@ darkslategray (boldtext) : rgb(50,50,93)
 
 html, body{
   height: 100%;
-  overflow: hidden;
+  
   margin: 0px;
   color: #525f7f;
 }

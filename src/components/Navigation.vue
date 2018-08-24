@@ -47,7 +47,7 @@
                 menuIsHovered: `5%`,
                 menuHasActivated: `30%`,
                 arrowRotation: ``,
-                arrowCloseDirection: `rotate(180deg)`,
+                arrowCloseDirection: `rotate(-180deg)`,
                 arrowOpenDirection: `rotate(0deg)`
             }
         },

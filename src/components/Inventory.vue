@@ -18,6 +18,7 @@
 <script>
 import BlurBox from './BlurBox.vue';
 import NewInventoryItem from './NewInventoryItem';
+import SignatureBox from './SignatureBox.vue';
     export default {
         data(){
             return {
@@ -26,7 +27,8 @@ import NewInventoryItem from './NewInventoryItem';
         },
         components: {
             BlurBox,
-            NewInventoryItem
+            NewInventoryItem,
+            SignatureBox
         }
     }
 
