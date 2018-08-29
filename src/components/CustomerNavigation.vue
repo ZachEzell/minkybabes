@@ -1,6 +1,6 @@
 <template>
     <div id="navigation-container">
-        <li class="navigation-title">Inventory</li>
+        <li class="navigation-title">Customer Info</li>
         <ul id="navigation-list">
             
             <div id="navigation-items">
@@ -28,12 +28,24 @@
             return {
                 items: [
                     {  
-                        linkName: 'New item'
+                        linkName: 'General'
                         
                     },
                     {  
-                        linkName: 'Reports'
+                        linkName: 'Address'
                         
+                    },
+                    {  
+                        linkName: 'Identification'
+                    },
+                    {
+                        linkName: 'Locations'
+                    },
+                    {
+                        linkName: 'References'
+                    },
+                    {
+                        linkName: 'Payments'
                     },
                  
                 ]
@@ -43,7 +55,7 @@
 </script>
 
 
-<style >
+<style scoped>
     #navigation-container{
         padding-left: 50px;
         padding-top: 50px;
@@ -58,20 +70,20 @@
     .navigation-title{
         animation: ease-in 1s fadeIn;
         font-weight: 700;
-        
+        color: white;
     }
     #navigation-items{
         display: flex;
         flex-direction: column;
     }
     .navigation-item{
-        margin-bottom: 8px;
+        margin-bottom: 15px;
         font-size: 0.85rem;
-        color:#6c7385;
+        color:rgb(209, 209, 209);
        
     }
     .navigation-item:hover {
-        color:#525f7f;
+        color:#bbbbbb;
         cursor: pointer;
     }
     @keyframes itemsSlideIn {

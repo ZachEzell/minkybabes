@@ -6,9 +6,7 @@
 
     
     <navigation-menu ></navigation-menu>
-    
-    <inventory-menu></inventory-menu>
-    <inventory-menu></inventory-menu>
+   
   </div>
 
 </template>
@@ -51,9 +49,9 @@ darkslategray (boldtext) : rgb(50,50,93)
 
 html, body{
   height: 100%;
-  
+  width: 100%;
   margin: 0px;
-  color: #525f7f;
+  
 }
 
 #app {
@@ -85,4 +83,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>

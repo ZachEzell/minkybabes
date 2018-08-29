@@ -1,24 +1,24 @@
 <template>
     <div id="navigation-menu">
         
-            <div id="left" class="column" :style="{width: menuWidth}">
-                <div class="top-left">
-                    <navigation-list v-if="menuIsActive"></navigation-list>
-                </div>
-                <div class="bottom">
-                        <div 
-                            id="open-close" 
-                            @mouseover=hoverMenu 
-                            @mouseout=closeMenu 
-                            @click=openOrCloseMenu
-                            :style="{transform: arrowRotation}"
-                        >
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                </div>
+        <div id="left" class="column" :style="{width: menuWidth}">
+            <div class="top-left">
+                <navigation-list v-if="menuIsActive"></navigation-list>
             </div>
-            <div id="right" class="column">
+            <div class="bottom">
+                    <div 
+                        id="open-close" 
+                        @mouseover=hoverMenu 
+                        @mouseout=closeMenu 
+                        @click=openOrCloseMenu
+                        :style="{transform: arrowRotation}"
+                    >
+                <i class="fas fa-arrow-right"></i>
+             </div>
+
+            </div>
+        </div>
+        <div id="right" class="column">
             <!-- <top-navigation></top-navigation> -->
             <signed-in-navigation></signed-in-navigation>
             <div class="top-right" type='minky'>
@@ -105,21 +105,19 @@
 <style scoped>
     #navigation-menu{
         height: 100%;
-        background:  rgb(197, 208, 224);
-        width: 100%;
         display: flex;
         justify-content: space-between;
-        overflow-y: scroll;
+        width: 100%;
     }
     #left{
         height: 100%;
         
-        
+        border-right: 1px solid rgb(210, 222, 233);
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ee+0,e0e5eb+100 */
         background: #e3e8ee; /* Old browsers */
         background: -moz-linear-gradient(left, #e3e8ee 0%, #d9e0e9 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #e3e8ee 0%,rgb(197, 208, 224) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to top, rgb(197, 208, 224) 0%,(197, 208, 224) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -webkit-linear-gradient(left, #e3e8ee 0%,#e0e5eb 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgb(193, 214, 233) 0%,rgb(207, 220, 231) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e8ee', endColorstr='#e0e5eb',GradientType=1 ); /* IE6-9 */
         
         transition: 1s;
@@ -131,7 +129,6 @@
     .top-right{
         display: inline-flex;
         flex-direction: column;
-        justify-content: space-between;
         
     }
     .top-left{
@@ -143,16 +140,10 @@
         height: 55%;
     }
     #right{
-       
+        margin-top: 50px;
         width: 80%;
         padding-left: 40px;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: space-between;
-        padding-top: 20px;
-       
-       
+        height: 100%;
         
     }
     .column{
@@ -168,7 +159,6 @@
         top: 50%;
         transform: rotate(180deg);
         transition: 1s;
-        color: #525f7f;
         
     }
     #open-close:hover{

@@ -10,7 +10,8 @@
                 <div class="spaced" v-if="item.status == 'rented' " > Status: <span class="rented item-description">{{ item.status }}</span></div>
                 <div class="spaced" v-if="item.status == 'stock' "  > Status:  <span class="stock item-description">{{ item.status }}</span></div>
                 <div class="edit-button">
-                    <basic-button>Edit</basic-button>
+                    <basic-button btnColor="info">Edit</basic-button>
+                    <basic-button btnColor="warning">Delete</basic-button>
                     
                 </div>
             </div>
@@ -162,8 +163,9 @@ let _ = require('lodash');
 
 <style>
     #inventory-items{
+        height: 100%;
        width: 85%;
-        background: white;
+        background: rgb(193, 214, 235);
         padding-left: 25px;
         padding-bottom: 25px;
         -webkit-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
@@ -174,6 +176,9 @@ let _ = require('lodash');
         padding-top: 25px;
         display: flex;
         flex-direction: column;
+        font-size: 0.8rem;
+        
+        
         
         
         
@@ -193,13 +198,19 @@ let _ = require('lodash');
         
     }
     .inventory-item{
-        border: 1px solid #e3e8ee;
-        width: 23%;
+        border: 1px solid #f5f6f8;
+        border-radius: 3px;
+        width: 60%;
+        background: white;
+        ;
         padding: 20px;
         margin-right: 20px;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
+        -webkit-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
+        -moz-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
+        box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
         
     }
     .rented{
@@ -215,6 +226,7 @@ let _ = require('lodash');
         font-size: 0.85rem;
     }
     .edit-button{
-        align-self: center;
+        display: flex;
+        align-items: center;
     }
 </style>

@@ -46,7 +46,7 @@
             changePlaceholder() {
                 this.secondPlaceHolderIsActive = true;
                 this.placeholder = ``,
-                this.headHunterBorder = `8px solid rgb(44,113,216)`
+                this.headHunterBorder = `2px solid rgb(194, 198, 255)`
             },
             checkIfTextArea(){
                 if (this.textArea == true){
@@ -94,8 +94,8 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
-        border-radius: 3px;
-        background: rgb(250, 250, 250);
+        border-radius: 1px;
+        
         
       
     }
@@ -104,13 +104,11 @@
         animation: goesUp 0.5s forwards;
         display: flex;
         justify-content: space-between;
-        color: #525f7f;
     }
     input{
         border: none;
         height: 20px;
         line-height: 20px;
-        background: rgb(250, 250, 250);
     }
     input:focus{
         outline: none;

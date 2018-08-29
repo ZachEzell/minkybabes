@@ -1,6 +1,6 @@
 <template>
     <div id="navigation-container">
-        <li class="navigation-title">Inventory</li>
+        <li class="navigation-title">Customer Info</li>
         <ul id="navigation-list">
             
             <div id="navigation-items">
@@ -28,12 +28,24 @@
             return {
                 items: [
                     {  
-                        linkName: 'New item'
+                        linkName: 'General'
                         
                     },
                     {  
-                        linkName: 'Reports'
+                        linkName: 'Address'
                         
+                    },
+                    {  
+                        linkName: 'Identification'
+                    },
+                    {
+                        linkName: 'Locations'
+                    },
+                    {
+                        linkName: 'References'
+                    },
+                    {
+                        linkName: 'Payments'
                     },
                  
                 ]
@@ -65,7 +77,7 @@
         flex-direction: column;
     }
     .navigation-item{
-        margin-bottom: 8px;
+        margin-bottom: 15px;
         font-size: 0.85rem;
         color:#6c7385;
        

@@ -11,6 +11,7 @@
                 <div class="spaced" v-if="item.status == 'stock' "  > Status:  <span class="stock item-description">{{ item.status }}</span></div>
                 <div class="edit-button">
                     <basic-button>Edit</basic-button>
+                    <basic-button>Delete</basic-button>
                     
                 </div>
             </div>
@@ -174,7 +175,7 @@ let _ = require('lodash');
         padding-top: 25px;
         display: flex;
         flex-direction: column;
-        
+        font-size: 0.8rem;
         
         
         
@@ -215,6 +216,6 @@ let _ = require('lodash');
         font-size: 0.85rem;
     }
     .edit-button{
-        align-self: center;
+        display: flex;
     }
 </style>
