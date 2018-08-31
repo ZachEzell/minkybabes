@@ -22,12 +22,14 @@
             <!-- <top-navigation></top-navigation> -->
             <signed-in-navigation></signed-in-navigation>
             <div class="top-right" type='minky'>
-                <!-- <inventory></inventory>
-                <inventory-items></inventory-items> -->
-                <customers></customers>
-                <customer-items></customer-items>
+                <!-- <inventory></inventory> -->
+                <!-- <inventory-items></inventory-items> -->
+                <!-- <customers></customers>
+                <customer-items></customer-items> -->
+                <dash-board></dash-board>
+                <dash-board-items></dash-board-items>
             </div>
-            <!-- <dash-board></dash-board> -->
+            
             
             <div class="bottom"> 
                
@@ -46,6 +48,7 @@
     import SignedInNavigation from './SignedInNavigation.vue';
     import Customers from './Customers.vue';
     import CustomerItems from './CustomerItems.vue';
+    import DashBoardItems from './DashBoardItems.vue';
     
     
     export default {
@@ -94,7 +97,8 @@
             DashBoard,
             SignedInNavigation,
             Customers,
-            CustomerItems
+            CustomerItems,
+            DashBoardItems
         }
 
     }
@@ -113,12 +117,12 @@
     }
     #left{
         height: 100%;
-        
+        color: white;
         
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e8ee+0,e0e5eb+100 */
         background: #e3e8ee; /* Old browsers */
         background: -moz-linear-gradient(left, #e3e8ee 0%, #d9e0e9 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #e3e8ee 0%,rgb(197, 208, 224) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-linear-gradient(top, rgb(197, 208, 224) 0%,rgb(197, 208, 224) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to top, rgb(197, 208, 224) 0%,(197, 208, 224) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e8ee', endColorstr='#e0e5eb',GradientType=1 ); /* IE6-9 */
         
@@ -131,16 +135,18 @@
     .top-right{
         display: inline-flex;
         flex-direction: column;
-        justify-content: space-between;
+       
+       
         
     }
     .top-left{
         display: flex;
         justify-content: flex-end;
         margin-right: 50px;
-        align-items: center;
+        margin-top: 11%;
+        align-items: flex-start;
    
-        height: 55%;
+        height: 65%;
     }
     #right{
        
@@ -148,9 +154,10 @@
         padding-left: 40px;
         
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: space-between;
         padding-top: 20px;
+        
        
        
         

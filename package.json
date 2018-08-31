@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "auth0-js": "^9.7.3",
+    "chart.js": "^2.7.2",
     "lodash": "^4.17.10",
     "signature_pad": "^3.0.0-beta.3",
     "vue": "^2.5.11",
+    "vue-chartjs": "^3.4.0",
     "vue-signature-pad": "^0.6.0"
   },
   "browserslist": [

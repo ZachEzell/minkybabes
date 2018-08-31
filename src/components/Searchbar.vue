@@ -51,13 +51,13 @@
 
     #searchbar{
         width: 250px;
-        height: 30px;
+        height: 28px;
         background: white;
         -webkit-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
         -moz-box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
         box-shadow: 2px 7px 30px -10px rgba(0,0,0,0.26);
-        padding: 2px 10px 2px 25px;
-        border-radius: 15px;
+        padding: 4px 10px 1px 25px;
+        border-radius: 5px;
         display: flex;
         
         flex-direction: column;
@@ -99,7 +99,11 @@
         color: rgb(190, 190, 190);
     }
     .fas {
+        color: rgb(156, 180, 216);
+    }
+    .fas:hover{
         color: rgb(44,113,216);
+        cursor: pointer;
     }
     @keyframes slideIn{
         0%{

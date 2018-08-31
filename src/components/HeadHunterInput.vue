@@ -94,7 +94,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
-        border-radius: 3px;
+        border-radius: 2px;
         background: rgb(250, 250, 250);
         
       

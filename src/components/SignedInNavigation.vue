@@ -38,7 +38,7 @@
             width: 85%;
             
             padding-right: 25px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
             
             
             
@@ -47,7 +47,7 @@
         #signed-in-bar{
             display: flex;
             justify-content: space-between;
-            width: 20%;
+            width: 15%;
             
         }
         .icon-container{

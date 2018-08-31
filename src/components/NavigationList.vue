@@ -1,12 +1,17 @@
 <template>
     <div id="navigation-container">
-        <li class="navigation-title">Inventory</li>
-        <ul id="navigation-list">
-            
-            <div id="navigation-items">
+        
+       <ul id="navigation-list">
+            <div class="icon">
+                <i class="fas fa-barcode "></i>
+            </div>
+
+            <div>
+                <li class="navigation-title">Inventory</li>
+                <div id="navigation-items">
                 <li 
                     class="navigation-item" 
-                    v-for="(item, index) in items" 
+                    v-for="(item, index) in items1" 
                     :key=index
                     :style="{animation: index/5 + `s itemsSlideIn forwards`}"
                     > 
@@ -14,8 +19,54 @@
                     </li>
                 
             </div>
+            </div>
+            
             
         </ul>
+        <ul id="navigation-list">
+            <div class="icon">
+                <i class="far fa-user "></i>
+            </div>
+
+            <div>
+                <li class="navigation-title">Customer</li>
+                <div id="navigation-items">
+                <li 
+                    class="navigation-item" 
+                    v-for="(item, index) in items2" 
+                    :key=index
+                    :style="{animation: index/5 + `s itemsSlideIn forwards`}"
+                    > 
+                        {{item.linkName}} 
+                    </li>
+                
+            </div>
+            </div>
+            
+            
+        </ul> 
+        <ul id="navigation-list">
+            <div class="icon">
+                <i class="fas fa-chart-pie "></i>
+            </div>
+
+            <div>
+                <li class="navigation-title">Reports</li>
+                <div id="navigation-items">
+                <li 
+                    class="navigation-item" 
+                    v-for="(item, index) in items3" 
+                    :key=index
+                    :style="{animation: index/5 + `s itemsSlideIn forwards`}"
+                    > 
+                        {{item.linkName}} 
+                    </li>
+                
+            </div>
+            </div>
+            
+            
+        </ul>  
     </div>
 
 </template>
@@ -26,7 +77,7 @@
     export default {
         data(){
             return {
-                items: [
+                items1: [
                     {  
                         linkName: 'New item'
                         
@@ -36,7 +87,27 @@
                         
                     },
                  
-                ]
+                ],
+                items2: [
+                    {
+                        linkName: 'New Customer',
+
+                    },
+                    {
+                        linkName: 'Create Contracts'
+                    },
+                    {
+                        linkName: 'Reports'
+                    }
+                ],
+                items3: [
+                    {
+                        linkName: 'Reports Suite'
+                    },
+                    {
+                        linkName: 'Custom Reports'
+                    }
+                ],
             }
         }
     }
@@ -46,23 +117,32 @@
 <style >
     #navigation-container{
         padding-left: 50px;
-        padding-top: 50px;
-        display: flex;
+        
+        
        
         
     }
     #navigation-list{
         display: flex;
-        flex-direction: column;
+        
+    }
+    .icon{
+        margin-right: 5px;
+        color: rgb(53, 109, 192);
     }
     .navigation-title{
         animation: ease-in 1s fadeIn;
         font-weight: 700;
+        color: rgb(53, 109, 192);
+        font-size: 0.91rem;
+        margin-bottom: 12px;
+
         
     }
     #navigation-items{
         display: flex;
         flex-direction: column;
+       
     }
     .navigation-item{
         margin-bottom: 8px;
