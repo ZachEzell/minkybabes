@@ -11,74 +11,57 @@
 
 
 <script>
-    import SearchBar from './Searchbar.vue';
-    import CircleInfo from './CircleInfo.vue';
-    export default {
-        data(){
-            return
-                {
-
-                }
-            
-        },
-        components: 
-            {
-                SearchBar,
-                CircleInfo
-            }
-    }
+import SearchBar from "./Searchbar.vue";
+import CircleInfo from "./CircleInfo.vue";
+export default {
+  components: {
+    SearchBar,
+    CircleInfo
+  }
+};
 </script>
 
 
 <style scoped>
+#signed-in-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
 
-    #signed-in-navigation{
-            display: flex;
-            justify-content: space-between;
-            width: 85%;
-            
-            padding-right: 25px;
-            margin-bottom: 25px;
-            
-            
-            
-
-        }
-        #signed-in-bar{
-            display: flex;
-            justify-content: space-between;
-            width: 15%;
-            
-        }
-        .icon-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        .fa-caret-up{
-            color: rgb(217,169,85);
-        }
-        .circle{
-            width: 25px;
-            height: 25px;
-            background: white;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgb(187, 187, 187);
-            
-        }
-        .circle:hover{
-            cursor: pointer;
-            color: rgb(0, 0, 0);
-
-        }
-        .info{
-            width: 45px;
-            height: 20px;
-            background: black;
-        }
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+#signed-in-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fa-caret-up {
+  color: rgb(217, 169, 85);
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(187, 187, 187);
+}
+.circle:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.info {
+  width: 45px;
+  height: 20px;
+  background: black;
+}
 </style>

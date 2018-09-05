@@ -20,15 +20,15 @@
             </div>
             <div id="right" class="column">
             <!-- <top-navigation></top-navigation> -->
-            
+           
             <div class="top-right" type='minky'>
-                <signed-in-navigation></signed-in-navigation>
+               <signed-in-navigation></signed-in-navigation>
                 <!-- <inventory></inventory> -->
                 <!-- <inventory-items></inventory-items> -->
-                <!-- <customers></customers>
-                <customer-items></customer-items> -->
-                <dash-board></dash-board>
-                <dash-board-items></dash-board-items>
+                <customers></customers>
+                <customer-items></customer-items> 
+                <!-- <dash-board></dash-board> -->
+                <!-- <dash-board-items></dash-board-items> -->
             </div>
             
             
@@ -134,7 +134,6 @@ export default {
     (197, 208, 224) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e8ee', endColorstr='#e0e5eb',GradientType=1 ); /* IE6-9 */
-
   transition: 1s;
 }
 .top-left,
@@ -151,13 +150,11 @@ export default {
   margin-right: 50px;
   margin-top: 11%;
   align-items: flex-start;
-
   height: 65%;
 }
 #right {
   width: 80%;
   padding-left: 40px;
-
   display: flex;
   justify-content: flex-start;
   align-items: space-between;

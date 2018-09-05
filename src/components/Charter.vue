@@ -1,19 +1,19 @@
 
 
 <script>
-import VueCharts from 'vue-chartjs';
-import { Bar, Line } from 'vue-chartjs';
+import VueCharts from "vue-chartjs";
+import { Bar, Line, mixins } from "vue-chartjs";
+const { reactiveProp } = mixins;
 
-
-    export default {
-        extends: Line,
-        props: ['data', 'options'],
-        mounted () {
-            // Overwriting base render method with actual data.
-            this.renderChart(this.data, this.options);
-            Chart.defaults.global.defaultFontColor = 'white';
+export default {
+  extends: Line,
+  mixins: [reactiveProp],
+  props: ["options"],
+  mounted() {
+    // Overwriting base render method with actual data.
+    this.renderChart(this.chartData, this.options);
+    Chart.defaults.global.defaultFontColor = "white";
   }
-}
-
+};
 </script>
 

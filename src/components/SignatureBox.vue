@@ -20,33 +20,19 @@
 
 
 <script>
-
-
 export default {
-
-    
-    data(){
-        return{
-           
-         
-        }
-    },
-    methods: {
-        undo() {
-            this.$refs.signaturePad.undoSignature();
-        }
-    },
-}
-
-
+  methods: {
+    undo() {
+      this.$refs.signaturePad.undoSignature();
+    }
+  }
+};
 </script>
 
 
 <style>
-
-    #signature-box{
-        display: flex;
-        flex-direction: column;
-
-    }
+#signature-box {
+  display: flex;
+  flex-direction: column;
+}
 </style>
